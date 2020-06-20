@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Food Recommender System</title>
+</head>
+<form action="{{ url_for('index') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        Food name:
+        <input name="foodName" type="text" required>
+        <br>
+        <br> Rating:
+        <input name="foodRating" type="number" step=any required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if original_input %}
+        {% for variable, value in original_input.items() %}
+            <b>{{ variable }}</b> : {{ value }}
+        {% endfor %}
+        <br>
+        <br> Top recommendations:
+           <p style="font-size:30px">{{ result }}</p>
+    {% endif %}
+</div></html>

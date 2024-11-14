@@ -1,5 +1,6 @@
 Food Recommender System
 ======
+Food Recommender uses machine learning and algorithms to suggest meals based on user’s preference/s, dietary restrictions and nutritional information. FRS improves user’s eating habits, discover new food items, create personalised diet plans and suggest eateries which matches their preferences.
 
 Install
 -------
